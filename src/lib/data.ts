@@ -1,25 +1,25 @@
 export const categories = [
   {
     name: "Casual Wear",
-    imageSrc: "/images/categories/casual.jpg",
+    imageSrc: "/images/categories/Casual Wear.jpg",
     imageAlt: "Casual Pakistani Lawn Suit",
     href: "/#collection",
   },
   {
     name: "Festive Wear",
-    imageSrc: "/images/categories/festive.jpg",
+    imageSrc: "/images/categories/Festive Wear.jpg",
     imageAlt: "Festive Pakistani 3 Piece",
     href: "/#collection",
   },
   {
     name: "Formal Wear",
-    imageSrc: "/images/categories/formal.jpg",
+    imageSrc: "/images/categories/Formal-Wear.jpg",
     imageAlt: "Formal Pakistani Embroidered Suit",
     href: "/#collection",
   },
   {
     name: "Luxury Pret",
-    imageSrc: "/images/categories/luxury.jpg",
+    imageSrc: "/images/categories/Luxury Pret.jpg",
     imageAlt: "Luxury Pakistani Pret Outfit",
     href: "/#collection",
   },

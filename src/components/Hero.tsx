@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero.jpg"
-          alt="Pakistani woman wearing a navy blue embroidered stitched velvet suit"
+          alt="Pakistani woman wearing a black stitched suit with pink floral embroidery and traditional jewelry"
           fill
           sizes="100vw"
           className="object-cover object-[62%_center] md:object-center"
