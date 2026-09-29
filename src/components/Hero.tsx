@@ -3,49 +3,45 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden bg-brand-dark min-h-[500px] lg:min-h-[700px]">
-      {/* Background Clothing Image */}
-      <div className="absolute inset-0">
+    <section className="relative w-full overflow-hidden bg-gradient-to-br from-[#30151C] via-[#211316] to-brand-dark min-h-[500px] lg:min-h-[700px]">
+      {/* Image on the right side — opposite the text */}
+      <div className="absolute inset-0 md:left-1/2">
         <Image
           src="/images/hero.jpg"
           alt="Pakistani woman wearing a black stitched suit with pink floral embroidery and traditional jewelry"
           fill
-          sizes="100vw"
-          className="object-cover object-[62%_center] md:object-center"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover object-[center_30%] brightness-125"
           priority
         />
-        {/* Dark gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-dark/80 to-brand-dark/55" />
-        {/* Additional subtle pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.04] bg-[url('/images/hero.jpg')] bg-cover bg-center mix-blend-overlay" />
+        {/* Mobile: soften image so text on top stays readable */}
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/80 via-brand-dark/55 to-brand-dark/30 md:hidden" />
+        {/* Desktop: gently fade image's left edge into the background */}
+        <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-brand-dark from-[6%] via-brand-dark/15 via-[35%] to-transparent" />
       </div>
-
-      {/* Decorative clothing silhouette accent */}
-      <div className="absolute right-0 top-0 h-full w-1/2 opacity-[0.06] bg-gradient-to-l from-brand-dark/30 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-16 h-full flex items-center">
-        <div className="max-w-xl">
+        <div className="w-full md:w-1/2 max-w-xl">
           {/* Fashion badge */}
-          <div className="inline-flex items-center gap-2 bg-brand-primary/20 border border-brand-primary/30 rounded-full px-4 py-1.5 mb-5">
-            <span className="w-2 h-2 bg-brand-primary rounded-full animate-pulse" />
-            <span className="text-brand-primary text-xs font-semibold tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 bg-brand-secondary/15 border border-brand-secondary/30 rounded-full px-4 py-1.5 mb-5">
+            <span className="w-2 h-2 bg-brand-secondary rounded-full animate-pulse" />
+            <span className="text-brand-secondary text-xs font-semibold tracking-wider uppercase">
               New Season 2025
             </span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight text-balance">
-            Elegance Stitched{" "}
-            <span className="text-brand-primary">for Every Moment</span>
+            Elegance{" "}
+            <span className="text-brand-secondary">for Every Moment</span>
           </h1>
-          <p className="mt-5 text-brand-accent/90 text-base lg:text-lg leading-relaxed max-w-md">
-            Discover timeless Pakistani stitched fashion made for every
-            occasion.
+          <p className="mt-5 text-brand-accent text-base lg:text-lg leading-relaxed max-w-md">
+            Pakistani stitched fashion for every occasion.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <a
               href="#collection"
-              className="bg-brand-primary text-white px-8 py-4 rounded-full font-semibold text-base tracking-wide hover:bg-brand-accent transition-colors duration-300 shadow-lg hover:shadow-xl inline-block text-center"
+              className="bg-brand-secondary text-brand-dark px-8 py-4 rounded-full font-semibold text-base tracking-wide hover:bg-brand-accent transition-colors duration-300 shadow-lg hover:shadow-xl inline-block text-center"
             >
               Explore Collection
             </a>
@@ -55,22 +51,6 @@ export default function Hero() {
             >
               Learn More
             </Link>
-          </div>
-
-          {/* Fashion stats */}
-          <div className="mt-10 flex gap-8">
-            <div>
-              <p className="text-white text-2xl font-bold">500+</p>
-              <p className="text-brand-accent/70 text-xs mt-0.5">Stitched Designs</p>
-            </div>
-            <div>
-              <p className="text-white text-2xl font-bold">50+</p>
-              <p className="text-brand-accent/70 text-xs mt-0.5">Collections</p>
-            </div>
-            <div>
-              <p className="text-white text-2xl font-bold">Free</p>
-              <p className="text-brand-accent/70 text-xs mt-0.5">Delivery</p>
-            </div>
           </div>
         </div>
       </div>
